@@ -1,6 +1,9 @@
 ; Program: Lowercase to Uppercase Case Conversion
 ; Course : CSE321 - Microprocessors and Microcontrollers
 ; Author : ~surjo (Md. Shaid Hasan)
+; Input  : a lowercase letter (e.g. a)
+; Output : ENTER A LOWER CASE LETTER: a
+;          IN UPPER CASE IT IS: A
 
 .MODEL  SMALL
 .STACK  100H
