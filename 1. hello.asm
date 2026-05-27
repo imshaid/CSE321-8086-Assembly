@@ -1,6 +1,8 @@
 ; Program: Print HELLO! on screen
 ; Course : CSE321 - Microprocessors and Microcontrollers
 ; Author : ~surjo (Md. Shaid Hasan)
+; Input  : None
+; Output : HELLO!
 
 .MODEL  SMALL
 .STACK  100H
