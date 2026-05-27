@@ -1,8 +1,9 @@
 ; Program: Read two digits and display their sum
 ; Course : CSE321 - Microprocessors and Microcontrollers
 ; Author : ~surjo (Md. Shaid Hasan)
-
-; 
+; Input  : Two decimal digits whose sum < 10 (e.g. 27)
+; Output : ?27
+;          THE SUM OF 2 AND 7 IS 9
 
 .MODEL  SMALL
 .STACK  100H
@@ -30,21 +31,21 @@ MAIN  PROC
     ; read first digit
     MOV  AH, 1
     INT  21H
-    MOV  DIG1, AL          ; save ASCII of first digit
-    SUB  AL, 30H           ; convert to number
-    MOV  BL, AL            ; BL = first digit value
+    MOV  DIG1, AL
+    SUB  AL, 30H
+    MOV  BL, AL
 
     ; read second digit
     MOV  AH, 1
     INT  21H
-    MOV  DIG2, AL          ; save ASCII of second digit
-    SUB  AL, 30H           ; convert to number
-    MOV  BH, AL            ; BH = second digit value
+    MOV  DIG2, AL
+    SUB  AL, 30H
+    MOV  BH, AL
 
     ; calculate sum
-    ADD  BL, BH            ; BL = sum
-    ADD  BL, 30H           ; convert sum to ASCII
-    MOV  SUM, BL           ; store sum ASCII
+    ADD  BL, BH
+    ADD  BL, 30H
+    MOV  SUM, BL
 
     ; display "THE SUM OF "
     LEA  DX, MSG2
