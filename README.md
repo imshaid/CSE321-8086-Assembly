@@ -1,3 +1,4 @@
+```nasm
 ; ═══════════════════════════════════════════════════════
 ; PROGRAM : 8086 Assembly Programs
 ; AUTHOR  : ~surjo (Md. Shaid Hasan)
@@ -5,7 +6,6 @@
 ; STATUS  : RUNNING
 ; ═══════════════════════════════════════════════════════
 
-```nasm
 MOV AX, KNOWLEDGE
 ADD AX, PRACTICE
 ; AX = MASTERY
@@ -13,9 +13,11 @@ ADD AX, PRACTICE
 
 ---
 
+```nasm
 ; ─────────────────────────────────────────────────────
 ; DEPENDENCIES
 ; ─────────────────────────────────────────────────────
+```
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [MASM/TASM Extension](https://marketplace.visualstudio.com/items?itemName=xsro.masm-tasm) by clcxsrolau
@@ -23,11 +25,11 @@ ADD AX, PRACTICE
 
 ---
 
+```nasm
 ; ─────────────────────────────────────────────────────
 ; HOW TO RUN
 ; ─────────────────────────────────────────────────────
 
-```nasm
 STEP_1: Install MASM/TASM extension in VS Code
 STEP_2: Open any .asm file
 STEP_3: Right-click inside the editor
@@ -38,9 +40,11 @@ STEP_4: Click "Run ASM code"
 
 ---
 
+```nasm
 ; ─────────────────────────────────────────────────────
 ; PROGRAM INDEX
 ; ─────────────────────────────────────────────────────
+```
 
 | Category | Programs | Description |
 |----------|----------|-------------|
@@ -52,7 +56,10 @@ STEP_4: Click "Run ASM code"
 ---
 
 ## Basic I/O
+
+```nasm
 ; Programs that demonstrate input and output operations using INT 21H
+```
 
 | # | Program | Input | Output |
 |---|---------|-------|--------|
@@ -65,7 +72,10 @@ STEP_4: Click "Run ASM code"
 ---
 
 ## Loop
+
+```nasm
 ; Programs that use the LOOP instruction for repeated execution
+```
 
 | # | Program | Input | Output |
 |---|---------|-------|--------|
@@ -81,7 +91,10 @@ STEP_4: Click "Run ASM code"
 ---
 
 ## Jump / Branching
+
+```nasm
 ; Programs that use conditional and unconditional jump instructions
+```
 
 | # | Program | Input | Output |
 |---|---------|-------|--------|
@@ -96,7 +109,10 @@ STEP_4: Click "Run ASM code"
 ---
 
 ## Loop + Jump Combined
+
+```nasm
 ; Programs that combine loop and branching instructions
+```
 
 | # | Program | Input | Output |
 |---|---------|-------|--------|
@@ -108,11 +124,10 @@ STEP_4: Click "Run ASM code"
 
 ---
 
+```nasm
 ; ─────────────────────────────────────────────────────
 ; IMPORTANT NOTES
 ; ─────────────────────────────────────────────────────
-
-```nasm
 ; [!] Factorial (10)      → N <= 5 only (8-bit register limit: max 255)
 ; [!] Grade Checker (19)  → Input must be exactly 3 digits
 ;                           e.g. enter 075 for 75, 098 for 98
@@ -123,11 +138,10 @@ STEP_4: Click "Run ASM code"
 
 ---
 
+```nasm
 ; ─────────────────────────────────────────────────────
 ; INT 21H QUICK REFERENCE
 ; ─────────────────────────────────────────────────────
-
-```nasm
 ; Function | Input        | Output       | Description
 ; ─────────────────────────────────────────────────────
 ; AH = 1   | —            | AL = char    | Single key input
@@ -138,7 +152,9 @@ STEP_4: Click "Run ASM code"
 
 ---
 
+```nasm
 ; ─────────────────────────────────────────────────────
 ; END PROGRAM
 ; HLT                     ; processor halted
 ; ─────────────────────────────────────────────────────
+```
