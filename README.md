@@ -1,23 +1,27 @@
-```nasm
-; ═══════════════════════════════════════════════════════
-; PROGRAM : 8086 Assembly Programs
-; AUTHOR  : ~surjo (Md. Shaid Hasan)
-; SYNTAX  : TASM (Turbo Assembler)
-; STATUS  : RUNNING
-; ═══════════════════════════════════════════════════════
+# 8086 Assembly Programs
 
-MOV AX, KNOWLEDGE
-ADD AX, PRACTICE
-; AX = MASTERY
-```
+A collection of 8086 assembly language programs written in TASM syntax.
+All programs are tested and verified to work correctly.
 
 ---
 
-```nasm
-; ─────────────────────────────────────────────────────
-; DEPENDENCIES
-; ─────────────────────────────────────────────────────
-```
+## Table of Contents
+
+- [8086 Assembly Programs](#8086-assembly-programs)
+  - [Table of Contents](#table-of-contents)
+  - [Requirements](#requirements)
+  - [How to Run](#how-to-run)
+  - [Program Index](#program-index)
+  - [Basic I/O](#basic-io)
+  - [Loop](#loop)
+  - [Jump / Branching](#jump--branching)
+  - [Loop + Jump Combined](#loop--jump-combined)
+  - [Important Notes](#important-notes)
+  - [INT 21H Quick Reference](#int-21h-quick-reference)
+
+---
+
+## Requirements
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [MASM/TASM Extension](https://marketplace.visualstudio.com/items?itemName=xsro.masm-tasm) by clcxsrolau
@@ -25,26 +29,18 @@ ADD AX, PRACTICE
 
 ---
 
-```nasm
-; ─────────────────────────────────────────────────────
-; HOW TO RUN
-; ─────────────────────────────────────────────────────
+## How to Run
 
-STEP_1: Install MASM/TASM extension in VS Code
-STEP_2: Open any .asm file
-STEP_3: Right-click inside the editor
-STEP_4: Click "Run ASM code"
-        ; DOSBox launches automatically
-        ; No manual setup needed
-```
+1. Install the **MASM/TASM** extension in VS Code
+2. Open any `.asm` file
+3. Right-click inside the editor
+4. Click **Run ASM code**
+
+The extension automatically compiles and runs the program using DOSBox — no manual setup needed.
 
 ---
 
-```nasm
-; ─────────────────────────────────────────────────────
-; PROGRAM INDEX
-; ─────────────────────────────────────────────────────
-```
+## Program Index
 
 | Category | Programs | Description |
 |----------|----------|-------------|
@@ -57,9 +53,7 @@ STEP_4: Click "Run ASM code"
 
 ## Basic I/O
 
-```nasm
-; Programs that demonstrate input and output operations using INT 21H
-```
+Programs that demonstrate input and output operations using INT 21H.
 
 | # | Program | Input | Output |
 |---|---------|-------|--------|
@@ -73,9 +67,7 @@ STEP_4: Click "Run ASM code"
 
 ## Loop
 
-```nasm
-; Programs that use the LOOP instruction for repeated execution
-```
+Programs that use the LOOP instruction for repeated execution.
 
 | # | Program | Input | Output |
 |---|---------|-------|--------|
@@ -92,9 +84,7 @@ STEP_4: Click "Run ASM code"
 
 ## Jump / Branching
 
-```nasm
-; Programs that use conditional and unconditional jump instructions
-```
+Programs that use conditional and unconditional jump instructions.
 
 | # | Program | Input | Output |
 |---|---------|-------|--------|
@@ -110,9 +100,7 @@ STEP_4: Click "Run ASM code"
 
 ## Loop + Jump Combined
 
-```nasm
-; Programs that combine loop and branching instructions
-```
+Programs that combine loop and branching instructions.
 
 | # | Program | Input | Output |
 |---|---------|-------|--------|
@@ -124,37 +112,26 @@ STEP_4: Click "Run ASM code"
 
 ---
 
-```nasm
-; ─────────────────────────────────────────────────────
-; IMPORTANT NOTES
-; ─────────────────────────────────────────────────────
-; [!] Factorial (10)      → N <= 5 only (8-bit register limit: max 255)
-; [!] Grade Checker (19)  → Input must be exactly 3 digits
-;                           e.g. enter 075 for 75, 098 for 98
-; [!] Vowel Check (20)    → Supports both uppercase and lowercase input
-; [!] Predefined values   → Edit the .DATA section to change input values
-; [!] All programs        → TASM syntax only, will not work with Win32 assembly
-```
+## Important Notes
+
+- **Factorial (10):** Supports N up to 5 only. Values above 5 exceed the 8-bit register limit (max 255).
+- **Grade Checker (19):** Input must be exactly 3 digits. Enter `075` for 75 marks, `098` for 98 marks.
+- **Vowel Check (20):** Supports both uppercase and lowercase input.
+- **Total Quantity Flag (25):** FLAG = 1 if total > 100, otherwise FLAG = 0.
+- **Predefined values:** Can be changed by editing the values in the `.DATA` section of each program.
+- **Syntax:** All programs use TASM syntax and will not work with Win32 assembly.
 
 ---
 
-```nasm
-; ─────────────────────────────────────────────────────
-; INT 21H QUICK REFERENCE
-; ─────────────────────────────────────────────────────
-; Function | Input        | Output       | Description
-; ─────────────────────────────────────────────────────
-; AH = 1   | —            | AL = char    | Single key input
-; AH = 2   | DL = char    | —            | Single character output
-; AH = 9   | DX = address | —            | String output (ends with $)
-; AH = 4CH | —            | —            | Exit to DOS
-```
+## INT 21H Quick Reference
+
+| Function | Input | Output | Description |
+|----------|-------|--------|-------------|
+| `AH = 1` | — | `AL = char` | Single key input |
+| `AH = 2` | `DL = char` | — | Single character output |
+| `AH = 9` | `DX = address` | — | String output (must end with `$`) |
+| `AH = 4CH` | — | — | Exit to DOS |
 
 ---
 
-```nasm
-; ─────────────────────────────────────────────────────
-; END PROGRAM
-; HLT                     ; processor halted
-; ─────────────────────────────────────────────────────
-```
+*~surjo (Md. Shaid Hasan)*
